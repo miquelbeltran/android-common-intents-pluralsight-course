@@ -17,7 +17,10 @@
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_margin="16dp"/>
-        <include layout="@layout/layout_user_feed"/>
+        <include layout="@layout/layout_user_feed"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="16dp"/>
 
     </LinearLayout>
 

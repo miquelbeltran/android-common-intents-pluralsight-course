@@ -1,33 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:background="@drawable/background_bubble"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@drawable/background_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
-            android:text="Share Something!"
+            android:text="@string/share_something"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" style="@style/Title"/>
+            android:layout_height="wrap_content" style="@style/Title" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textView"/>
 
     <EditText
             android:background="@drawable/background_input"
             android:padding="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:lines="3"
             android:gravity="bottom"
-            android:hint="Your Message"
+            android:hint="@string/your_message"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:id="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/textView"/>
 
     <Button
-            android:text="Send!"
+            android:text="@string/send"
             style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_marginEnd="16dp"
             android:layout_gravity="end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-    />
+            app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/buttonSend"/>
+    <Button
+            android:text="@string/attach"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            android:id="@+id/buttonAttach"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="@string/reminder"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            android:id="@+id/buttonReminder"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSend"
+            app:layout_constraintStart_toEndOf="@+id/buttonAttach"
+            android:layout_marginStart="8dp"/>
 
-</LinearLayout>
+    <ImageView
+            android:id="@+id/imageViewAttachmentPreview"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAttach"
+            app:layout_constraintStart_toStartOf="@+id/buttonAttach" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/buttonAttach"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

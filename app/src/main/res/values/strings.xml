@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Common Intents</string>
+    <string name="app_name">Common Friends</string>
+    <string name="share_something">Share Something!</string>
+    <string name="your_message">Your Message</string>
+    <string name="send">Send!</string>
+    <string name="attach">Attach</string>
+    <string name="reminder">Reminder</string>
+    <string name="anne_droid">Anne Droid</string>
+    <string name="hey_miguel_have_you_tried_the_new_course_about_common_intent_actions">Hey Miguel! Have you tried the
+        new course about Common Intent actions?
+    </string>
+    <string name="save_as_note">Save As Note</string>
+    <string name="birthday_march_21st">Birthday: March 21st</string>
+    <string name="address_182_n_union_ave_farmington_ut_84025">Address: 182 N. Union Ave, Farmington, UT 84025</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="view_on_maps">View on Maps</string>
+    <string name="order_a_taxi">Order a Taxi</string>
+    <string name="hobbies_gardening">Hobbies: Gardening</string>
+    <string name="more_about_gardening">More About \'Gardening\'</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="website_example_com">Website: example.com</string>
+    <string name="phone_123_456_890">Phone: (123) 456 890</string>
+    <string name="call">Call</string>
+    <string name="email_anne_example_com">Email: Anne@example.com</string>
+    <string name="email">Send Email</string>
+    <string name="export_contact">Export Contact</string>
+    <string name="artist">Favorite Artist: Beethoven</string>
+    <string name="listen">Play Music</string>
 </resources>
