@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openProfile() {
-        startActivity(Intent(this, ProfileActivity::class.java))
+        val intent = Intent(this, ProfileActivity::class.java)
+        startActivity(intent)
     }
 
     private val REQUEST_IMAGE_CAPTURE = 1

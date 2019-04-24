@@ -162,6 +162,7 @@ class ProfileActivity : AppCompatActivity() {
             putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true)
             putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, dateLong)
             putExtra(CalendarContract.EXTRA_EVENT_END_TIME, dateLong)
+            putExtra(CalendarContract.Events.RRULE, "FREQ=YEARLY")
 
         }
         if (intent.resolveActivity(packageManager) != null) {
