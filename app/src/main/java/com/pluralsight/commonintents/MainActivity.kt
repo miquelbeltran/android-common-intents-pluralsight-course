@@ -1,25 +1,11 @@
 package com.pluralsight.commonintents
 
-import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
-import android.graphics.Bitmap
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Environment
 import android.provider.AlarmClock
-import android.provider.MediaStore
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.layout_message_input.*
 import kotlinx.android.synthetic.main.layout_user_feed.*
-import java.io.File
-import android.os.Environment.getExternalStorageDirectory
-import android.util.Log
-import android.view.View
-import androidx.core.content.FileProvider
-import com.google.android.gms.actions.NoteIntents
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -63,6 +49,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onButtonReminderClick() {
-        todo("Create Reminder")
+        val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
+            putExtra(AlarmClock.EXTRA_MESSAGE, "Write a post")
+            putExtra(AlarmClock.EXTRA_HOUR, 17)
+            putExtra(AlarmClock.EXTRA_MINUTES, 0)
+            putExtra(AlarmClock.EXTRA_DAYS, arrayListOf(
+                java.util.Calendar.MONDAY,
+                java.util.Calendar.TUESDAY,
+                java.util.Calendar.WEDNESDAY,
+                java.util.Calendar.THURSDAY,
+                java.util.Calendar.FRIDAY
+            ))
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 }
